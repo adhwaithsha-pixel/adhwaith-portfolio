@@ -34,12 +34,17 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-slate-400 max-w-md leading-relaxed">
-              Performance Digital Marketer fusing <span className="text-sapling-200 font-medium">BSc Mathematics quantitative rigor</span> with high-velocity creative advertising, SEO, and lead funnels to build exponential visibility and scalable revenue.
-            </p>
+            <div className="space-y-2.5 text-sm text-slate-300/90 max-w-md leading-relaxed">
+              <p>
+                Digital Marketing Specialist with 1+ year of hands-on experience in SEO, Social Media Marketing, Meta Ads, Lead Generation, Email Marketing, and Marketing Automation.
+              </p>
+              <p>
+                Helping businesses build a stronger online presence, generate quality leads, and achieve measurable growth through data-driven digital marketing strategies.
+              </p>
+            </div>
             <div className="flex items-center gap-2 text-xs text-sapling-400 font-mono">
               <span className="inline-block w-2 h-2 rounded-full bg-sapling-400 animate-pulse" />
-              <span>Available for Consulting & Growth Execution</span>
+              <span>Available for Freelance & Growth Projects</span>
             </div>
           </div>
 
