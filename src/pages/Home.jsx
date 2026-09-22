@@ -164,7 +164,7 @@ export default function Home() {
       {/* ========================================================================= */}
       <section id="stats" className="relative py-12 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {statsData.map((stat) => (
               <div
                 key={stat.id}

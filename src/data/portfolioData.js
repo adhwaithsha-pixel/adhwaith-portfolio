@@ -74,25 +74,19 @@ export const statsData = [
   },
   {
     id: "leads",
-    value: 10000,
+    value: 12000,
     suffix: "+",
-    label: "Qualified Leads Generated"
+    label: "Leads Generated"
   },
   {
     id: "campaigns",
-    value: 100,
+    value: 90,
     suffix: "+",
     label: "Campaigns Managed"
   },
   {
-    id: "industries",
-    value: 5,
-    suffix: "+",
-    label: "Industries Served"
-  },
-  {
     id: "adspend",
-    value: 400000,
+    value: 350000,
     suffix: "+",
     label: "Ad Spend Managed"
   }
