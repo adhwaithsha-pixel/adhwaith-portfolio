@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #060807;
+    color: #F8FAFC;
+  }
+
+  /* Custom scrollbar in Deep Obsidian and Electric Lime */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080b0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1c2824;
+    border-radius: 4px;
+    border: 1px solid rgba(142, 229, 79, 0.18);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #273a34;
+  }
+}
+
+@layer utilities {
+  /* Electric Lime & Pure White Typography Gradients */
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#8EE54F] to-[#8EE54F];
+  }
+
+  .text-gradient-cyan {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#8EE54F] to-[#A8F35C];
+  }
+
+  .text-gradient-purple {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#8EE54F] to-[#77D138];
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#8EE54F] to-[#A8F35C];
+  }
+
+  /* Obsidian Glassmorphism Cards: Deep Obsidian with Electric Lime #8EE54F accents */
+  .glass-card {
+    background: rgba(11, 15, 14, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(142, 229, 79, 0.12);
+  }
+
+  .glass-card-hover {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(16, 23, 21, 0.95);
+    border-color: rgba(142, 229, 79, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(142, 229, 79, 0.25);
+  }
+
+  .glass-nav {
+    background: rgba(6, 8, 7, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(142, 229, 79, 0.12);
+  }
+
+  .glass-pill {
+    background: rgba(22, 33, 29, 0.45);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(142, 229, 79, 0.2);
+  }
+
+  /* Deep Obsidian Ambient Glow Atmosphere with Subtle Electric Lime */
+  .mesh-background {
+    background-image: 
+      radial-gradient(at 50% 0%, rgba(142, 229, 79, 0.12) 0px, transparent 65%),
+      radial-gradient(at 85% 25%, rgba(142, 229, 79, 0.05) 0px, transparent 45%),
+      radial-gradient(at 20% 75%, rgba(28, 40, 36, 0.30) 0px, transparent 55%),
+      radial-gradient(at 10% 90%, rgba(142, 229, 79, 0.04) 0px, transparent 45%);
+  }
+
+  .grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(142, 229, 79, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(142, 229, 79, 0.03) 1px, transparent 1px);
+  }
+}
+
+
