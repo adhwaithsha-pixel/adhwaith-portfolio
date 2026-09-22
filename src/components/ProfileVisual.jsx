@@ -82,6 +82,10 @@ export default function ProfileVisual({ className = "" }) {
             <img 
               src={profileDefaultImg} 
               alt="Adhwaith MV - Digital Marketer" 
+              width="768"
+              height="1024"
+              loading="lazy"
+              decoding="async"
               onError={() => setImageError(true)}
               className="w-full h-full object-cover object-[center_12%] scale-[1.02] group-hover:scale-105 transition-transform duration-700 ease-out"
             />

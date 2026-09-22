@@ -62,8 +62,8 @@ export default function Home() {
       {/* ========================================================================= */}
       <section id="hero" className="relative min-h-[90vh] flex items-center justify-center pt-8 pb-16 overflow-hidden">
         {/* Ambient atmospheric glows */}
-        <div className="absolute top-1/4 left-1/4 w-[550px] h-[550px] bg-gradient-to-tr from-[#8EE54F]/10 via-[#1c2824]/25 to-transparent rounded-full blur-[150px] pointer-events-none -z-10" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-[#8EE54F]/08 via-[#1c2824]/20 to-transparent rounded-full blur-[140px] pointer-events-none -z-10" />
+        <div className="absolute top-1/4 left-1/4 w-[550px] h-[550px] bg-gradient-to-tr from-[#8EE54F]/10 via-[#1c2824]/25 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-[#8EE54F]/08 via-[#1c2824]/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_auto_1fr] gap-8 lg:gap-6 xl:gap-8 items-center">
@@ -140,6 +140,10 @@ export default function Home() {
                 <img 
                   src={profileDefaultImg} 
                   alt="Adhwaith MV - Digital Marketing Specialist" 
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-[center_12%] brightness-100 contrast-[1.02] group-hover:scale-[1.02] transition-transform duration-500"
                 />
 
@@ -231,6 +235,10 @@ export default function Home() {
                   <img
                     src={aboutImg}
                     alt="Adhwaith MV"
+                    width="684"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-60 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
@@ -544,6 +552,10 @@ export default function Home() {
                     <img
                       src={project.cardImage || project.image}
                       alt={project.title}
+                      width="1024"
+                      height="576"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -644,6 +656,10 @@ export default function Home() {
                     <img
                       src={service.image}
                       alt={service.name}
+                      width="735"
+                      height="490"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

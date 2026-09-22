@@ -99,6 +99,10 @@ export default function ProjectDetail() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  width="1024"
+                  height="576"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full max-h-[500px] object-contain rounded-xl shadow-lg group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
@@ -320,6 +324,10 @@ export default function ProjectDetail() {
                   <img
                     src={project.image}
                     alt={`${project.title} Evidence Screenshot`}
+                    width="1024"
+                    height="576"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full rounded-xl object-cover object-top max-h-[500px] group-hover:scale-[1.01] transition-transform duration-300"
                   />
                   <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -358,6 +366,10 @@ export default function ProjectDetail() {
                         <img
                           src={proof.image}
                           alt={proof.title}
+                          width="984"
+                          height="489"
+                          loading="lazy"
+                          decoding="async"
                           className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                         <div className="absolute inset-0 bg-dark-950/0 group-hover:bg-dark-950/30 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -606,6 +618,10 @@ export default function ProjectDetail() {
             <img
               src={zoomedImg}
               alt="Enlarged Campaign Proof"
+              width="1200"
+              height="800"
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto max-h-[85vh] object-contain rounded-xl"
             />
           </div>

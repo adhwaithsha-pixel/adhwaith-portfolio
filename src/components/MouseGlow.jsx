@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function MouseGlow() {
-  const [mousePos, setMousePos] = useState({ x: -200, y: -200 });
-  const [isVisible, setIsVisible] = useState(false);
+  const glowRef = useRef(null);
 
   useEffect(() => {
     // Only enable on desktop pointers
@@ -10,32 +9,37 @@ export default function MouseGlow() {
       return;
     }
 
+    let rafId;
     const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-      if (!isVisible) setIsVisible(true);
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        if (glowRef.current) {
+          glowRef.current.style.background = `radial-gradient(600px circle at ${e.clientX}px ${e.clientY}px, rgba(142, 229, 79, 0.06), rgba(28, 40, 36, 0.2), transparent 70%)`;
+          glowRef.current.style.opacity = '1';
+        }
+      });
     };
 
     const handleMouseLeave = () => {
-      setIsVisible(false);
+      if (glowRef.current) {
+        glowRef.current.style.opacity = '0';
+      }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     document.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
+      cancelAnimationFrame(rafId);
       window.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [isVisible]);
-
-  if (!isVisible) return null;
+  }, []);
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
-      style={{
-        background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(142, 229, 79, 0.06), rgba(28, 40, 36, 0.2), transparent 70%)`,
-      }}
+      ref={glowRef}
+      className="pointer-events-none fixed inset-0 z-30 opacity-0 transition-opacity duration-300"
     />
   );
 }
