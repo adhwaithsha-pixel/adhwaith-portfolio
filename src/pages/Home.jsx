@@ -28,7 +28,6 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import ClientMarquee from '../components/ClientMarquee';
 import ContactSection from '../components/ContactSection';
 import profileDefaultImg from '../assets/adhwaith-profile.jpg';
-import aboutCutoutImg from '../assets/adhwaith-cutout.png';
 
 export default function Home() {
   // Clear any old stored photo from localStorage to ensure crisp original photo is used
@@ -186,120 +185,72 @@ export default function Home() {
       {/* ========================================================================= */}
       {/* 3. ABOUT ME SECTION */}
       {/* ========================================================================= */}
-      <section id="about" className="relative py-24 scroll-mt-20 overflow-hidden">
+      <section id="about" className="relative py-24 sm:py-32 scroll-mt-20 overflow-hidden">
         {/* Subtle Ambient Background Lighting */}
-        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] rounded-full bg-[#8EE54F]/10 blur-[130px] pointer-events-none" />
+        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-[#8EE54F]/5 blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-10 right-0 w-[500px] h-[500px] rounded-full bg-[#10b981]/5 blur-[140px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
-            {/* Left Narrative Column (7 cols) */}
-            <div className="lg:col-span-7 space-y-8">
-              <div className="inline-flex items-center gap-2 text-base font-bold text-[#8EE54F] uppercase tracking-wider">
-                <Sparkles className="w-4 h-4 text-[#8EE54F]" />
+          <div className="max-w-4xl mx-auto space-y-10">
+            {/* Header: Enlarged Tag & Headline */}
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2.5 text-lg sm:text-xl font-bold text-[#8EE54F] uppercase tracking-wider">
+                <Sparkles className="w-5 h-5 text-[#8EE54F]" />
                 <span>ABOUT ME</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display leading-[1.18]">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-display leading-[1.14]">
                 I Turn Digital Strategies <br className="hidden sm:inline" />
                 <span className="text-gradient-gold">Into Business Growth</span>
               </h2>
-
-              {/* Mobile Cutout Showcase (Visible on smaller screens) */}
-              <div className="lg:hidden relative my-6 flex justify-center">
-                <div className="relative w-full max-w-[320px]">
-                  <div className="absolute inset-0 bg-[#8EE54F]/15 blur-2xl rounded-full" />
-                  <img
-                    src={aboutCutoutImg}
-                    alt="Adhwaith MV - Digital Marketing Specialist"
-                    width="408"
-                    height="611"
-                    loading="lazy"
-                    decoding="async"
-                    className="relative w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)]"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#060807] via-[#060807]/80 to-transparent pointer-events-none" />
-                </div>
-              </div>
-
-              {/* Main Introduction Paragraphs */}
-              <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-                {personalInfo.aboutDetailed.map((paragraph, index) => (
-                  <p key={index} className="text-slate-300/90 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-
-              {/* Subsections: What I Do, My Approach, What I Aim For */}
-              {personalInfo.aboutSections && (
-                <div className="space-y-8 pt-4">
-                  {personalInfo.aboutSections.map((section, idx) => (
-                    <div key={idx} className="pb-6 border-b border-white/10 space-y-3">
-                      <h3 className="text-lg sm:text-xl font-bold text-white font-display flex items-center gap-2.5">
-                        <span className="w-2 h-2 rounded-full bg-[#8EE54F]" />
-                        <span>{section.title}</span>
-                      </h3>
-                      <div className="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-                        {section.paragraphs.map((p, pIdx) => (
-                          <p key={pIdx} className="text-slate-300/90 leading-relaxed">
-                            {p}
-                          </p>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="pt-2 flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="px-7 py-3.5 rounded-full bg-[#8EE54F] hover:bg-[#9cf257] text-black font-bold font-display text-sm shadow-glow-sapling transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer active:scale-95"
-                >
-                  <span>Let's Discuss Growth</span>
-                  <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
-                </button>
-                <button
-                  onClick={() => scrollToSection('projects')}
-                  className="px-7 py-3.5 rounded-full bg-[#0f1413]/80 hover:bg-[#151d1b] border border-white/15 hover:border-[#8EE54F]/50 text-white font-semibold text-sm transition-all hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer shadow-sm"
-                >
-                  <span>View Case Studies</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#8EE54F] stroke-[2.5]" />
-                </button>
-              </div>
             </div>
 
-            {/* Right Column: Large Cutout Showcase on Desktop (5 cols) */}
-            <div className="hidden lg:flex lg:col-span-5 flex-col items-center justify-center sticky top-28 self-start">
-              {/* Emerald/Lime Ambient Glow Aura */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 xl:w-96 h-80 xl:h-96 rounded-full bg-[#8EE54F]/15 blur-3xl pointer-events-none" />
+            {/* Main Introduction Paragraphs (Enlarged Text) */}
+            <div className="space-y-6 text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal">
+              {personalInfo.aboutDetailed.map((paragraph, index) => (
+                <p key={index} className="text-slate-300/95 leading-[1.8]">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
-              {/* Cutout Image */}
-              <div className="relative w-full max-w-[420px] xl:max-w-[460px] flex justify-center">
-                <img
-                  src={aboutCutoutImg}
-                  alt="Adhwaith MV - Digital Marketing Specialist"
-                  width="408"
-                  height="611"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-auto max-h-[680px] xl:max-h-[740px] object-contain drop-shadow-[0_25px_45px_rgba(0,0,0,0.95)] filter brightness-[1.02] contrast-[1.02]"
-                />
-
-                {/* Soft Bottom Fade into Obsidian Ground */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#060807] via-[#060807]/75 to-transparent pointer-events-none" />
-
-                {/* Sleek Floating Status Overlay */}
-                <div className="absolute bottom-4 left-0 right-0 text-center z-10 pointer-events-none">
-                  <div className="inline-flex items-center gap-2 text-xs font-mono drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
-                    <span className="w-2 h-2 rounded-full bg-[#8EE54F] animate-pulse" />
-                    <span className="text-white font-bold tracking-wide">Adhwaith MV</span>
-                    <span className="text-zinc-500">•</span>
-                    <span className="text-[#8EE54F] font-semibold">Digital Marketing Specialist</span>
+            {/* Subsections: What I Do, My Approach, What I Aim For (Enlarged) */}
+            {personalInfo.aboutSections && (
+              <div className="space-y-10 pt-4">
+                {personalInfo.aboutSections.map((section, idx) => (
+                  <div key={idx} className="pb-8 border-b border-white/10 space-y-4">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white font-display flex items-center gap-3">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#8EE54F]" />
+                      <span>{section.title}</span>
+                    </h3>
+                    <div className="space-y-4 text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal">
+                      {section.paragraphs.map((p, pIdx) => (
+                        <p key={pIdx} className="text-slate-300/90 leading-[1.8]">
+                          {p}
+                        </p>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
+            )}
+
+            {/* Action Buttons */}
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="px-8 py-4 rounded-full bg-[#8EE54F] hover:bg-[#9cf257] text-black font-bold font-display text-base shadow-glow-sapling transition-all transform hover:-translate-y-0.5 flex items-center gap-2.5 cursor-pointer active:scale-95"
+              >
+                <span>Let's Discuss Growth</span>
+                <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="px-8 py-4 rounded-full bg-[#0f1413]/80 hover:bg-[#151d1b] border border-white/15 hover:border-[#8EE54F]/50 text-white font-semibold text-base transition-all hover:-translate-y-0.5 flex items-center gap-2.5 cursor-pointer shadow-sm"
+              >
+                <span>View Case Studies</span>
+                <ArrowUpRight className="w-4 h-4 text-[#8EE54F] stroke-[2.5]" />
+              </button>
             </div>
           </div>
         </div>
