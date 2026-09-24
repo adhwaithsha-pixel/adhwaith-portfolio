@@ -257,35 +257,35 @@ export default function Home() {
                 {/* Right Card Details */}
                 <div className="space-y-4">
                   {/* Experience */}
-                  <div className="space-y-1">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="pb-4 border-b border-white/10">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                       Experience
                     </div>
-                    <div className="text-white font-bold text-base font-display flex items-center gap-2">
+                    <div className="text-white font-bold text-base font-display flex items-center gap-2.5">
                       <Zap className="w-4 h-4 text-sapling-400 shrink-0" />
                       <span>{personalInfo.rightCard.experience}</span>
                     </div>
                   </div>
 
                   {/* Specialism */}
-                  <div className="space-y-1">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="pb-4 border-b border-white/10">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                       Specialism
                     </div>
-                    <div className="text-sapling-300 font-bold text-sm sm:text-base font-display flex items-center gap-2">
+                    <div className="text-sapling-300 font-bold text-sm sm:text-base font-display flex items-center gap-2.5">
                       <Target className="w-4 h-4 text-sapling-400 shrink-0" />
                       <span>{personalInfo.rightCard.specialism}</span>
                     </div>
                   </div>
 
                   {/* Core Skills */}
-                  <div className="space-y-2">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="pb-4 border-b border-white/10">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
                       Core Skills
                     </div>
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm">
+                    <div className="flex flex-wrap items-center gap-x-3.5 gap-y-2 text-xs sm:text-sm">
                       {personalInfo.rightCard.coreSkills.split('•').map((skill, idx) => (
-                        <span key={idx} className="inline-flex items-center gap-1.5 text-sapling-300 font-medium">
+                        <span key={idx} className="inline-flex items-center gap-2 text-sapling-300 font-medium">
                           <span className="w-1.5 h-1.5 rounded-full bg-sapling-400 shrink-0" />
                           <span>{skill.trim()}</span>
                         </span>
@@ -294,13 +294,13 @@ export default function Home() {
                   </div>
 
                   {/* Worked With */}
-                  <div className="space-y-2">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="pb-1">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
                       Worked With
                     </div>
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm">
+                    <div className="flex flex-wrap items-center gap-x-3.5 gap-y-2 text-xs sm:text-sm">
                       {personalInfo.rightCard.workedWith.split('•').map((brand, idx) => (
-                        <span key={idx} className="inline-flex items-center gap-1.5 text-slate-300 font-medium">
+                        <span key={idx} className="inline-flex items-center gap-2 text-slate-300 font-medium">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#8EE54F]/70 shrink-0" />
                           <span>{brand.trim()}</span>
                         </span>
