@@ -28,7 +28,7 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import ClientMarquee from '../components/ClientMarquee';
 import ContactSection from '../components/ContactSection';
 import profileDefaultImg from '../assets/adhwaith-profile.jpg';
-import aboutImg from '../assets/adhwaith-about.jpg';
+import aboutCutoutImg from '../assets/adhwaith-cutout.png';
 
 export default function Home() {
   // Clear any old stored photo from localStorage to ensure crisp original photo is used
@@ -186,11 +186,14 @@ export default function Home() {
       {/* ========================================================================= */}
       {/* 3. ABOUT ME SECTION */}
       {/* ========================================================================= */}
-      <section id="about" className="relative py-24 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="about" className="relative py-24 scroll-mt-20 overflow-hidden">
+        {/* Subtle Ambient Background Lighting */}
+        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] rounded-full bg-[#8EE54F]/10 blur-[130px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
-            {/* Left Narrative (7 cols) */}
-            <div className="lg:col-span-7 space-y-6">
+            {/* Left Narrative Column (7 cols) */}
+            <div className="lg:col-span-7 space-y-8">
               <div className="inline-flex items-center gap-2 text-base font-bold text-[#8EE54F] uppercase tracking-wider">
                 <Sparkles className="w-4 h-4 text-[#8EE54F]" />
                 <span>ABOUT ME</span>
@@ -201,6 +204,24 @@ export default function Home() {
                 <span className="text-gradient-gold">Into Business Growth</span>
               </h2>
 
+              {/* Mobile Cutout Showcase (Visible on smaller screens) */}
+              <div className="lg:hidden relative my-6 flex justify-center">
+                <div className="relative w-full max-w-[320px]">
+                  <div className="absolute inset-0 bg-[#8EE54F]/15 blur-2xl rounded-full" />
+                  <img
+                    src={aboutCutoutImg}
+                    alt="Adhwaith MV - Digital Marketing Specialist"
+                    width="408"
+                    height="611"
+                    loading="lazy"
+                    decoding="async"
+                    className="relative w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.9)]"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#060807] via-[#060807]/80 to-transparent pointer-events-none" />
+                </div>
+              </div>
+
+              {/* Main Introduction Paragraphs */}
               <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
                 {personalInfo.aboutDetailed.map((paragraph, index) => (
                   <p key={index} className="text-slate-300/90 leading-relaxed">
@@ -209,8 +230,29 @@ export default function Home() {
                 ))}
               </div>
 
+              {/* Subsections: What I Do, My Approach, What I Aim For */}
+              {personalInfo.aboutSections && (
+                <div className="space-y-8 pt-4">
+                  {personalInfo.aboutSections.map((section, idx) => (
+                    <div key={idx} className="pb-6 border-b border-white/10 space-y-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-white font-display flex items-center gap-2.5">
+                        <span className="w-2 h-2 rounded-full bg-[#8EE54F]" />
+                        <span>{section.title}</span>
+                      </h3>
+                      <div className="space-y-3 text-slate-300 text-sm sm:text-base leading-relaxed">
+                        {section.paragraphs.map((p, pIdx) => (
+                          <p key={pIdx} className="text-slate-300/90 leading-relaxed">
+                            {p}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {/* Action Buttons */}
-              <div className="pt-4 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
                   className="px-7 py-3.5 rounded-full bg-[#8EE54F] hover:bg-[#9cf257] text-black font-bold font-display text-sm shadow-glow-sapling transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer active:scale-95"
@@ -228,97 +270,34 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Card (5 cols) */}
-            <div className="lg:col-span-5">
-              <div className="w-full rounded-2xl glass-card p-6 sm:p-7 border border-white/15 shadow-2xl relative bg-[#0e1312]/80 backdrop-blur-xl hover:border-[#8EE54F]/35 transition-all">
-                {/* Photo at the top of Right Card */}
-                <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-lg mb-6 group">
-                  <img
-                    src={aboutImg}
-                    alt="Adhwaith MV"
-                    width="684"
-                    height="1024"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-60 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                    <span className="text-sapling-300 text-xs font-mono font-semibold flex items-center gap-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      <span className="w-2 h-2 rounded-full bg-sapling-400 animate-pulse" />
-                      Digital Marketing Specialist
-                    </span>
-                    <span className="text-xs font-mono text-slate-200 font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      Adhwaith MV
-                    </span>
-                  </div>
-                </div>
+            {/* Right Column: Large Cutout Showcase on Desktop (5 cols) */}
+            <div className="hidden lg:flex lg:col-span-5 flex-col items-center justify-center sticky top-28 self-start">
+              {/* Emerald/Lime Ambient Glow Aura */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 xl:w-96 h-80 xl:h-96 rounded-full bg-[#8EE54F]/15 blur-3xl pointer-events-none" />
 
-                {/* Right Card Details */}
-                <div className="space-y-4">
-                  {/* Experience */}
-                  <div className="pb-4 border-b border-white/10">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
-                      Experience
-                    </div>
-                    <div className="text-white font-bold text-base font-display flex items-center gap-2.5">
-                      <Zap className="w-4 h-4 text-sapling-400 shrink-0" />
-                      <span>{personalInfo.rightCard.experience}</span>
-                    </div>
-                  </div>
+              {/* Cutout Image */}
+              <div className="relative w-full max-w-[420px] xl:max-w-[460px] flex justify-center">
+                <img
+                  src={aboutCutoutImg}
+                  alt="Adhwaith MV - Digital Marketing Specialist"
+                  width="408"
+                  height="611"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto max-h-[680px] xl:max-h-[740px] object-contain drop-shadow-[0_25px_45px_rgba(0,0,0,0.95)] filter brightness-[1.02] contrast-[1.02]"
+                />
 
-                  {/* Specialism */}
-                  <div className="pb-4 border-b border-white/10">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
-                      Specialism
-                    </div>
-                    <div className="text-sapling-300 font-bold text-sm sm:text-base font-display flex items-center gap-2.5">
-                      <Target className="w-4 h-4 text-sapling-400 shrink-0" />
-                      <span>{personalInfo.rightCard.specialism}</span>
-                    </div>
-                  </div>
+                {/* Soft Bottom Fade into Obsidian Ground */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#060807] via-[#060807]/75 to-transparent pointer-events-none" />
 
-                  {/* Core Skills */}
-                  <div className="pb-4 border-b border-white/10">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
-                      Core Skills
-                    </div>
-                    <div className="flex flex-wrap items-center gap-x-3.5 gap-y-2 text-xs sm:text-sm">
-                      {personalInfo.rightCard.coreSkills.split('•').map((skill, idx) => (
-                        <span key={idx} className="inline-flex items-center gap-2 text-sapling-300 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-sapling-400 shrink-0" />
-                          <span>{skill.trim()}</span>
-                        </span>
-                      ))}
-                    </div>
+                {/* Sleek Floating Status Overlay */}
+                <div className="absolute bottom-4 left-0 right-0 text-center z-10 pointer-events-none">
+                  <div className="inline-flex items-center gap-2 text-xs font-mono drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">
+                    <span className="w-2 h-2 rounded-full bg-[#8EE54F] animate-pulse" />
+                    <span className="text-white font-bold tracking-wide">Adhwaith MV</span>
+                    <span className="text-zinc-500">•</span>
+                    <span className="text-[#8EE54F] font-semibold">Digital Marketing Specialist</span>
                   </div>
-
-                  {/* Worked With */}
-                  <div className="pb-1">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
-                      Worked With
-                    </div>
-                    <div className="flex flex-wrap items-center gap-x-3.5 gap-y-2 text-xs sm:text-sm">
-                      {personalInfo.rightCard.workedWith.split('•').map((brand, idx) => (
-                        <span key={idx} className="inline-flex items-center gap-2 text-slate-300 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#8EE54F]/70 shrink-0" />
-                          <span>{brand.trim()}</span>
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Footer CTA */}
-                <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">Ready to grow your brand?</span>
-                  <button
-                    onClick={() => scrollToSection('contact')}
-                    className="text-xs font-semibold text-sapling-400 hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
-                  >
-                    <span>Request Proposal</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
                 </div>
               </div>
             </div>
