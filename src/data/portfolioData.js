@@ -29,33 +29,9 @@ export const personalInfo = {
   shortIntro: "I’m a Digital Marketing professional with hands-on experience in SEO, Social Media Marketing, Meta Ads, Content Marketing, Email Marketing, and Lead Generation. I use data-driven strategies and creative marketing to help brands build visibility, engage their audience, and achieve measurable growth.",
   aboutHeadline: "I Turn Digital Strategies Into Business Growth",
   aboutDetailed: [
-    "I’m a Digital Marketing professional with 1+ year of hands-on experience in developing, executing, and optimizing digital marketing strategies for brands and businesses. My approach combines strategic planning, creative execution, performance analysis, and continuous optimization to build stronger digital presence and support measurable business growth.",
-    "My experience spans the complete digital marketing ecosystem — from SEO and social media to paid advertising, lead generation, content, email marketing, performance marketing, and automation. I focus on connecting these channels into a clear marketing strategy rather than treating them as separate activities.",
-    "Over the course of my experience, I’ve worked with brands including Viya Innovations, Fontspell, Maritech Solutions, AlverConnect, StoryCat, and Viyanisa. Working across different businesses and industries has given me practical exposure to understanding business objectives, identifying target audiences, developing suitable marketing strategies, executing campaigns, and evaluating performance."
-  ],
-  aboutSections: [
-    {
-      title: "What I Do",
-      paragraphs: [
-        "I specialize in digital strategy, SEO, social media marketing, Meta Ads, lead generation, content marketing, email marketing, and performance marketing. My work involves campaign planning, audience research, content strategy, paid campaign management, optimization, analytics, and performance tracking.",
-        "I also have hands-on experience with marketing automation and workflow development, including Instagram and WhatsApp automation, email workflows, customer follow-ups, broadcast campaigns, and n8n-based automation. These systems help streamline repetitive processes, improve customer engagement, and make marketing operations more efficient."
-      ]
-    },
-    {
-      title: "My Approach",
-      paragraphs: [
-        "I believe effective digital marketing starts with understanding the business before executing the marketing. Every brand has different objectives, audiences, market conditions, and growth opportunities, so I focus on building strategies around those specific requirements.",
-        "My approach combines data, creativity, testing, and optimization — identifying opportunities, executing the strategy, measuring performance, and continuously improving campaigns based on real results."
-      ]
-    },
-    {
-      title: "What I Aim For",
-      paragraphs: [
-        "My focus is to help businesses strengthen their digital presence, reach the right audience, generate quality leads, improve marketing performance, and create sustainable growth.",
-        "I’m also continuously developing my expertise in AI-powered marketing, automation, analytics, performance marketing, and modern digital growth strategies to stay ahead of the evolving digital landscape.",
-        "For me, digital marketing is not simply about being visible online — it’s about building a strategic digital presence that creates meaningful engagement and contributes to real business growth."
-      ]
-    }
+    "I’m a Digital Marketing professional with 1+ year of hands-on experience in planning and executing digital marketing strategies. I work across SEO, social media marketing, Meta Ads, content marketing, email marketing, lead generation, and marketing automation to help businesses build their online presence and achieve measurable growth.",
+    "Over the past year, I’ve worked with brands and companies including Viya Innovations, Fontspell, Maritech Solutions, AlverConnect, StoryCat, and Viyanisa, handling different digital marketing activities based on their business goals.",
+    "I specialize in creating digital strategies, managing social media, running paid campaigns, improving SEO, generating leads, and analyzing marketing performance. I also work with automation workflows to improve customer engagement, follow-ups, and marketing efficiency."
   ],
   rightCard: {
     experience: "1+ Year in Digital Marketing",

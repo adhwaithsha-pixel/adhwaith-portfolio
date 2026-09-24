@@ -28,6 +28,7 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import ClientMarquee from '../components/ClientMarquee';
 import ContactSection from '../components/ContactSection';
 import profileDefaultImg from '../assets/adhwaith-profile.jpg';
+import aboutImg from '../assets/adhwaith-about.jpg';
 
 export default function Home() {
   // Clear any old stored photo from localStorage to ensure crisp original photo is used
@@ -185,72 +186,145 @@ export default function Home() {
       {/* ========================================================================= */}
       {/* 3. ABOUT ME SECTION */}
       {/* ========================================================================= */}
-      <section id="about" className="relative py-24 sm:py-32 scroll-mt-20 overflow-hidden">
-        {/* Subtle Ambient Background Lighting */}
-        <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] rounded-full bg-[#8EE54F]/5 blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-10 right-0 w-[500px] h-[500px] rounded-full bg-[#10b981]/5 blur-[140px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto space-y-10">
-            {/* Header: Enlarged Tag & Headline */}
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2.5 text-lg sm:text-xl font-bold text-[#8EE54F] uppercase tracking-wider">
-                <Sparkles className="w-5 h-5 text-[#8EE54F]" />
+      <section id="about" className="relative py-24 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+            {/* Left Narrative (7 cols) */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0d1211] border border-[#8EE54F]/30 text-[#8EE54F] text-sm sm:text-base font-mono font-bold uppercase tracking-wider">
+                <Sparkles className="w-4 h-4 text-[#8EE54F]" />
                 <span>ABOUT ME</span>
               </div>
 
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight font-display leading-[1.14]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display leading-[1.18]">
                 I Turn Digital Strategies <br className="hidden sm:inline" />
                 <span className="text-gradient-gold">Into Business Growth</span>
               </h2>
+
+              <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                {personalInfo.aboutDetailed.map((paragraph, index) => (
+                  <p key={index} className="text-slate-300/90 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="px-7 py-3.5 rounded-full bg-[#8EE54F] hover:bg-[#9cf257] text-black font-bold font-display text-sm shadow-glow-sapling transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer active:scale-95"
+                >
+                  <span>Let's Discuss Growth</span>
+                  <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+                </button>
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="px-7 py-3.5 rounded-full bg-[#0f1413]/80 hover:bg-[#151d1b] border border-white/15 hover:border-[#8EE54F]/50 text-white font-semibold text-sm transition-all hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer shadow-sm"
+                >
+                  <span>View Case Studies</span>
+                  <ArrowUpRight className="w-4 h-4 text-[#8EE54F] stroke-[2.5]" />
+                </button>
+              </div>
             </div>
 
-            {/* Main Introduction Paragraphs (Enlarged Text) */}
-            <div className="space-y-6 text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal">
-              {personalInfo.aboutDetailed.map((paragraph, index) => (
-                <p key={index} className="text-slate-300/95 leading-[1.8]">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            {/* Right Card (5 cols) */}
+            <div className="lg:col-span-5">
+              <div className="w-full rounded-2xl glass-card p-6 sm:p-7 border border-white/15 shadow-2xl relative bg-[#0e1312]/80 backdrop-blur-xl hover:border-[#8EE54F]/35 transition-all">
+                {/* Photo at the top of Right Card */}
+                <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-lg mb-6 group">
+                  <img
+                    src={aboutImg}
+                    alt="Adhwaith MV"
+                    width="684"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-60 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                    <span className="px-2.5 py-1 rounded-full bg-dark-950/80 backdrop-blur-md border border-sapling-400/30 text-sapling-300 text-[11px] font-mono font-medium flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-sapling-400 animate-pulse" />
+                      Digital Marketing Specialist
+                    </span>
+                    <span className="text-[11px] font-mono text-slate-300 bg-dark-950/70 px-2 py-0.5 rounded backdrop-blur-md">
+                      Adhwaith MV
+                    </span>
+                  </div>
+                </div>
 
-            {/* Subsections: What I Do, My Approach, What I Aim For (Enlarged) */}
-            {personalInfo.aboutSections && (
-              <div className="space-y-10 pt-4">
-                {personalInfo.aboutSections.map((section, idx) => (
-                  <div key={idx} className="pb-8 border-b border-white/10 space-y-4">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white font-display flex items-center gap-3">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#8EE54F]" />
-                      <span>{section.title}</span>
-                    </h3>
-                    <div className="space-y-4 text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed font-normal">
-                      {section.paragraphs.map((p, pIdx) => (
-                        <p key={pIdx} className="text-slate-300/90 leading-[1.8]">
-                          {p}
-                        </p>
+                {/* Right Card Details */}
+                <div className="space-y-4">
+                  {/* Experience */}
+                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                      Experience
+                    </div>
+                    <div className="text-white font-bold text-base font-display flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-sapling-400 shrink-0" />
+                      <span>{personalInfo.rightCard.experience}</span>
+                    </div>
+                  </div>
+
+                  {/* Specialism */}
+                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                      Specialism
+                    </div>
+                    <div className="text-sapling-300 font-bold text-sm sm:text-base font-display flex items-center gap-2">
+                      <Target className="w-4 h-4 text-sapling-400 shrink-0" />
+                      <span>{personalInfo.rightCard.specialism}</span>
+                    </div>
+                  </div>
+
+                  {/* Core Skills */}
+                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                      Core Skills
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {personalInfo.rightCard.coreSkills.split('•').map((skill, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2.5 py-1 rounded-lg bg-sapling-400/10 border border-sapling-400/25 text-sapling-200 text-xs font-medium"
+                        >
+                          {skill.trim()}
+                        </span>
                       ))}
                     </div>
                   </div>
-                ))}
-              </div>
-            )}
 
-            {/* Action Buttons */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 rounded-full bg-[#8EE54F] hover:bg-[#9cf257] text-black font-bold font-display text-base shadow-glow-sapling transition-all transform hover:-translate-y-0.5 flex items-center gap-2.5 cursor-pointer active:scale-95"
-              >
-                <span>Let's Discuss Growth</span>
-                <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="px-8 py-4 rounded-full bg-[#0f1413]/80 hover:bg-[#151d1b] border border-white/15 hover:border-[#8EE54F]/50 text-white font-semibold text-base transition-all hover:-translate-y-0.5 flex items-center gap-2.5 cursor-pointer shadow-sm"
-              >
-                <span>View Case Studies</span>
-                <ArrowUpRight className="w-4 h-4 text-[#8EE54F] stroke-[2.5]" />
-              </button>
+                  {/* Worked With */}
+                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                      Worked With
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {personalInfo.rightCard.workedWith.split('•').map((brand, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-semibold"
+                        >
+                          {brand.trim()}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer CTA */}
+                <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-xs text-slate-400">Ready to grow your brand?</span>
+                  <button
+                    onClick={() => scrollToSection('contact')}
+                    className="text-xs font-semibold text-sapling-400 hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    <span>Request Proposal</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
