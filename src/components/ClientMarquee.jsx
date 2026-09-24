@@ -18,9 +18,23 @@ export default function ClientMarquee() {
             key={`${client.name}-${idx}`}
             className="flex items-center gap-3.5 px-5 py-3.5 rounded-xl glass-card border border-sapling-400/10 hover:border-sapling-400/40 transition-all duration-300 min-w-[250px] sm:min-w-[280px] shadow-sm hover:shadow-glow-sapling cursor-default"
           >
-            {/* Logo Emblem Placeholder */}
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-tr from-dark-800 to-dark-700 border border-sapling-400/20 flex items-center justify-center font-display font-bold text-sapling-400 text-sm tracking-wider shadow-inner shrink-0">
-              {client.symbol}
+            {/* Logo Emblem */}
+            <div className="w-10 h-10 rounded-lg overflow-hidden bg-dark-900 border border-sapling-400/20 flex items-center justify-center shrink-0 shadow-inner p-0.5">
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  width="40"
+                  height="40"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover rounded-md"
+                />
+              ) : (
+                <span className="font-display font-bold text-sapling-400 text-sm tracking-wider">
+                  {client.symbol}
+                </span>
+              )}
             </div>
 
             {/* Client Info */}

@@ -11,6 +11,10 @@ import alverconnectReportImg from '../assets/alverconnect-strategy-report.png';
 import alverconnectPosterImg from '../assets/alverconnect-poster.jpg';
 import viyanisaSocialMediaImg from '../assets/viyanisa-social-media.png';
 import viyaInnovationsSocialImg from '../assets/viya-innovations-social.png';
+import maritechLogoImg from '../assets/maritech-logo.png';
+import viyaInnovationsLogoImg from '../assets/viya-innovations-logo.jpg';
+import viyanisaLogoImg from '../assets/viyanisa-logo.jpg';
+import alverconnectLogoImg from '../assets/alverconnect-logo.png';
 import serviceSeoImg from '../assets/service-seo.jpg';
 import serviceSocialMediaImg from '../assets/service-social-media.jpg';
 import serviceMetaAdsImg from '../assets/service-meta-ads.jpg';
@@ -157,15 +161,16 @@ export const experienceTimeline = [
 
 export const clientsData = [
   {
-    id: "viya-innovations",
-    name: "Viya Innovations",
-    role: "Social Media Marketer",
-    industry: "Tech & Product Solutions",
-    result: "Audience Engagement & Growth",
-    symbol: "VI",
+    id: "storycat",
+    name: "StoryCat",
+    role: "Email Marketing",
+    industry: "Creative & Media Agency",
+    result: "Email CRM & Tracking",
+    symbol: "SC",
+    logo: storycatLogoImg,
     activities: [
-      "Social media management & content strategy",
-      "Audience engagement & brand growth"
+      "Email campaign planning & management",
+      "Customer engagement & performance tracking"
     ]
   },
   {
@@ -175,6 +180,7 @@ export const clientsData = [
     industry: "Design & Digital Media",
     result: "SEO & Growth Strategy",
     symbol: "FS",
+    logo: fontspellLogoImg,
     activities: [
       "Digital marketing, SEO & social media management",
       "Meta Ads, email & WhatsApp automation",
@@ -188,6 +194,7 @@ export const clientsData = [
     industry: "Enterprise Marine Tech",
     result: "Organic Search Growth",
     symbol: "MS",
+    logo: maritechLogoImg,
     activities: [
       "Overall SEO management",
       "Keyword research & on-page optimization",
@@ -195,27 +202,16 @@ export const clientsData = [
     ]
   },
   {
-    id: "alverconnect",
-    name: "AlverConnect",
-    role: "Strategy & Social Media",
-    industry: "Strategic Consulting & Growth",
-    result: "Brand Strategy & Growth",
-    symbol: "AC",
+    id: "viya-innovations",
+    name: "Viya Innovations",
+    role: "Social Media Marketer",
+    industry: "Tech & Product Solutions",
+    result: "Audience Engagement & Growth",
+    symbol: "VI",
+    logo: viyaInnovationsLogoImg,
     activities: [
-      "Digital marketing strategy building",
-      "Social media management & brand growth"
-    ]
-  },
-  {
-    id: "storycat",
-    name: "StoryCat",
-    role: "Email Marketing",
-    industry: "Creative & Media Agency",
-    result: "Email CRM & Tracking",
-    symbol: "SC",
-    activities: [
-      "Email campaign planning & management",
-      "Customer engagement & performance tracking"
+      "Social media management & content strategy",
+      "Audience engagement & brand growth"
     ]
   },
   {
@@ -225,9 +221,23 @@ export const clientsData = [
     industry: "Fashion & Lifestyle",
     result: "Brand Awareness & Reach",
     symbol: "VN",
+    logo: viyanisaLogoImg,
     activities: [
       "Social media management & content planning",
       "Engagement & brand awareness"
+    ]
+  },
+  {
+    id: "alverconnect",
+    name: "AlverConnect",
+    role: "Strategy & Social Media",
+    industry: "Strategic Consulting & Growth",
+    result: "Brand Strategy & Growth",
+    symbol: "AC",
+    logo: alverconnectLogoImg,
+    activities: [
+      "Digital marketing strategy building",
+      "Social media management & brand growth"
     ]
   }
 ];

@@ -465,8 +465,22 @@ export default function Home() {
                 <div>
                   {/* Top Header: Emblem + Name + Role */}
                   <div className="flex items-center gap-3.5 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-dark-800 to-dark-700 border border-sapling-400/30 flex items-center justify-center font-display font-bold text-sapling-400 text-sm shadow-inner shrink-0 group-hover:scale-105 transition-transform">
-                      {client.symbol}
+                    <div className="w-12 h-12 rounded-xl overflow-hidden bg-dark-900 border border-sapling-400/30 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner p-1">
+                      {client.logo ? (
+                        <img
+                          src={client.logo}
+                          alt={client.name}
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      ) : (
+                        <span className="font-display font-bold text-sapling-400 text-sm">
+                          {client.symbol}
+                        </span>
+                      )}
                     </div>
                     <div className="min-w-0">
                       <h3 className="text-base sm:text-lg font-bold text-white font-display group-hover:text-sapling-300 transition-colors truncate">
