@@ -625,7 +625,7 @@ export default function Home() {
                   {/* Large Bright Lime Pill Button matching Image 2 */}
                   <div className="pt-3">
                     <div className="w-full py-3.5 sm:py-4 px-6 rounded-full bg-[#8EE54F] hover:bg-[#9cf257] text-black font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition-all shadow-glow hover:shadow-glow-sapling group-hover:scale-[1.01]">
-                      <span>View Case Study</span>
+                      <span>View Project</span>
                       <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                     </div>
                   </div>

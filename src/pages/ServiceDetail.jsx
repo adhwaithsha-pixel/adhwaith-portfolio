@@ -208,7 +208,7 @@ export default function ServiceDetail() {
                     <p className="text-xs text-slate-400 mt-2 line-clamp-2">{p.shortDesc}</p>
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-white">
-                    <span>Explore Case Study</span>
+                    <span>View Project</span>
                     <ArrowUpRight className="w-4 h-4 text-sapling-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </Link>
