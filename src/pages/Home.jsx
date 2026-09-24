@@ -464,29 +464,29 @@ export default function Home() {
               >
                 <div>
                   {/* Top Header: Logo + Name + Role */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center">
+                  <div className="flex items-center gap-4 sm:gap-5 mb-4">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center shadow-md">
                       {client.logo ? (
                         <img
                           src={client.logo}
                           alt={client.name}
-                          width="64"
-                          height="64"
+                          width="96"
+                          height="96"
                           loading="lazy"
                           decoding="async"
-                          className="w-full h-full object-cover rounded-xl"
+                          className="w-full h-full object-cover rounded-2xl"
                         />
                       ) : (
-                        <span className="font-display font-bold text-sapling-400 text-base">
+                        <span className="font-display font-bold text-sapling-400 text-lg">
                           {client.symbol}
                         </span>
                       )}
                     </div>
                     <div className="min-w-0">
-                      <h3 className="text-base sm:text-lg font-bold text-white font-display group-hover:text-[#8EE54F] transition-colors truncate">
+                      <h3 className="text-lg sm:text-xl font-bold text-white font-display group-hover:text-[#8EE54F] transition-colors truncate">
                         {client.name}
                       </h3>
-                      <p className="text-xs font-mono font-medium text-white/90 truncate">
+                      <p className="text-xs sm:text-sm font-mono font-medium text-white/90 truncate mt-0.5">
                         {client.role}
                       </p>
                     </div>

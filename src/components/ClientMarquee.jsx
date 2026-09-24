@@ -19,16 +19,16 @@ export default function ClientMarquee() {
             className="flex items-center gap-3.5 px-5 py-3.5 rounded-xl glass-card border border-sapling-400/10 hover:border-sapling-400/40 transition-all duration-300 min-w-[250px] sm:min-w-[280px] shadow-sm hover:shadow-glow-sapling cursor-default"
           >
             {/* Logo Emblem */}
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 flex items-center justify-center shadow-sm">
               {client.logo ? (
                 <img
                   src={client.logo}
                   alt={client.name}
-                  width="48"
-                  height="48"
+                  width="64"
+                  height="64"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-xl"
                 />
               ) : (
                 <span className="font-display font-bold text-sapling-400 text-sm tracking-wider">
