@@ -483,28 +483,28 @@ export default function Home() {
                       )}
                     </div>
                     <div className="min-w-0">
-                      <h3 className="text-base sm:text-lg font-bold text-white font-display group-hover:text-sapling-300 transition-colors truncate">
+                      <h3 className="text-base sm:text-lg font-bold text-white font-display group-hover:text-[#8EE54F] transition-colors truncate">
                         {client.name}
                       </h3>
-                      <p className="text-xs font-mono font-semibold text-sapling-400 truncate">
+                      <p className="text-xs font-mono font-medium text-white/90 truncate">
                         {client.role}
                       </p>
                     </div>
                   </div>
 
                   {/* Divider */}
-                  <div className="h-[1px] w-full bg-white/5 mb-4" />
+                  <div className="h-[1px] w-full bg-white/10 mb-4" />
 
                   {/* Bullet Points */}
                   <div className="space-y-2">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-slate-400 block font-semibold">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-white/70 block font-semibold">
                       Deliverables & Scope:
                     </span>
-                    <ul className="space-y-2 text-xs text-slate-300">
+                    <ul className="space-y-2 text-xs text-white">
                       {(client.activities || []).map((activity, aIdx) => (
                         <li key={aIdx} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-sapling-400 shrink-0 mt-0.5" />
-                          <span>{activity}</span>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#8EE54F] shrink-0 mt-0.5" />
+                          <span className="text-white">{activity}</span>
                         </li>
                       ))}
                     </ul>
@@ -512,9 +512,9 @@ export default function Home() {
                 </div>
 
                 {/* Card Tag Footer */}
-                <div className="mt-6 pt-3 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-slate-400">{client.industry}</span>
-                  <span className="text-[10px] font-mono text-sapling-400 font-semibold px-2 py-0.5 rounded bg-sapling-400/10 border border-sapling-400/20">
+                <div className="mt-6 pt-3 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-[11px] font-mono text-white/80">{client.industry}</span>
+                  <span className="text-[10px] font-mono text-white font-semibold px-2 py-0.5 rounded bg-white/10 border border-white/20">
                     {client.result}
                   </span>
                 </div>

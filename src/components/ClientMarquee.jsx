@@ -41,11 +41,11 @@ export default function ClientMarquee() {
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between gap-2">
                 <h4 className="text-sm font-bold text-white truncate font-display">{client.name}</h4>
-                <span className="text-[10px] font-mono text-sapling-400 font-semibold px-1.5 py-0.5 rounded bg-sapling-400/10 border border-sapling-400/25 whitespace-nowrap">
+                <span className="text-[10px] font-mono text-white font-semibold px-1.5 py-0.5 rounded bg-white/10 border border-white/20 whitespace-nowrap">
                   {client.result}
                 </span>
               </div>
-              <p className="text-xs text-sapling-300/90 font-mono font-medium truncate">{client.role}</p>
+              <p className="text-xs text-white/80 font-mono font-medium truncate">{client.role}</p>
             </div>
           </div>
         ))}
