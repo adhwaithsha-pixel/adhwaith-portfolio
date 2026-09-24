@@ -191,8 +191,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
             {/* Left Narrative (7 cols) */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0d1211] border border-[#8EE54F]/30 text-[#8EE54F] text-xs font-mono font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-[#8EE54F]" />
+              <div className="inline-flex items-center gap-2 text-base font-bold text-[#8EE54F] uppercase tracking-wider">
+                <Sparkles className="w-4 h-4 text-[#8EE54F]" />
                 <span>ABOUT ME</span>
               </div>
 
@@ -243,12 +243,12 @@ export default function Home() {
                     className="w-full h-60 sm:h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                    <span className="px-2.5 py-1 rounded-full bg-dark-950/80 backdrop-blur-md border border-sapling-400/30 text-sapling-300 text-[11px] font-mono font-medium flex items-center gap-1.5">
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                    <span className="text-sapling-300 text-xs font-mono font-semibold flex items-center gap-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       <span className="w-2 h-2 rounded-full bg-sapling-400 animate-pulse" />
                       Digital Marketing Specialist
                     </span>
-                    <span className="text-[11px] font-mono text-slate-300 bg-dark-950/70 px-2 py-0.5 rounded backdrop-blur-md">
+                    <span className="text-xs font-mono text-slate-200 font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                       Adhwaith MV
                     </span>
                   </div>
@@ -257,8 +257,8 @@ export default function Home() {
                 {/* Right Card Details */}
                 <div className="space-y-4">
                   {/* Experience */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                  <div className="space-y-1">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
                       Experience
                     </div>
                     <div className="text-white font-bold text-base font-display flex items-center gap-2">
@@ -268,8 +268,8 @@ export default function Home() {
                   </div>
 
                   {/* Specialism */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                  <div className="space-y-1">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
                       Specialism
                     </div>
                     <div className="text-sapling-300 font-bold text-sm sm:text-base font-display flex items-center gap-2">
@@ -279,34 +279,30 @@ export default function Home() {
                   </div>
 
                   {/* Core Skills */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
                       Core Skills
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm">
                       {personalInfo.rightCard.coreSkills.split('•').map((skill, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-sapling-400/10 border border-sapling-400/25 text-sapling-200 text-xs font-medium"
-                        >
-                          {skill.trim()}
+                        <span key={idx} className="inline-flex items-center gap-1.5 text-sapling-300 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-sapling-400 shrink-0" />
+                          <span>{skill.trim()}</span>
                         </span>
                       ))}
                     </div>
                   </div>
 
                   {/* Worked With */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                  <div className="space-y-2">
+                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400">
                       Worked With
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm">
                       {personalInfo.rightCard.workedWith.split('•').map((brand, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-semibold"
-                        >
-                          {brand.trim()}
+                        <span key={idx} className="inline-flex items-center gap-1.5 text-slate-300 font-medium">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#8EE54F]/70 shrink-0" />
+                          <span>{brand.trim()}</span>
                         </span>
                       ))}
                     </div>
