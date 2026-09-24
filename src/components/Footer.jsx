@@ -18,12 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-sapling-400/15">
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-dark-900 border border-sapling-400/30 flex items-center justify-center">
-                <span className="font-sans font-bold text-sapling-400 text-base tracking-tight">
-                  AM
-                </span>
-              </div>
+            <div className="flex items-center">
               <div className="flex flex-col">
                 <span className="font-sans font-bold text-xl text-white tracking-tight flex items-center gap-1.5">
                   <span>Adhwaith</span>

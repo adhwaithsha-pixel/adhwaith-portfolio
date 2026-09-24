@@ -61,15 +61,8 @@ export default function Navbar() {
         <Link 
           to="/" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center gap-3 group"
+          className="flex items-center group"
         >
-          {/* Minimal Clean Emblem */}
-          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-dark-900 border border-sapling-400/30 group-hover:border-sapling-400/60 flex items-center justify-center transition-colors shadow-sm flex-shrink-0">
-            <span className="font-sans font-bold text-sapling-400 text-base sm:text-lg tracking-tight">
-              AM
-            </span>
-          </div>
-
           {/* Minimal Clean Name & Subtitle */}
           <div className="flex flex-col">
             <span className="font-sans font-bold text-lg sm:text-xl text-white group-hover:text-sapling-300 transition-colors tracking-tight leading-tight">

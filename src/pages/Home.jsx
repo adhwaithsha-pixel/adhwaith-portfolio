@@ -71,7 +71,7 @@ export default function Home() {
             {/* Left Content Column */}
             <div className="space-y-6 text-center lg:text-left">
               {/* Availability Tag */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0d1211] border border-[#8EE54F]/30 text-xs font-semibold text-white tracking-wide shadow-sm">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold text-white tracking-wide">
                 <span className="w-2 h-2 rounded-full bg-[#8EE54F] animate-ping" />
                 <span className="font-mono text-[#8EE54F] font-bold tracking-wider uppercase">Adhwaith MV</span>
                 <span className="text-zinc-600">•</span>
@@ -142,7 +142,8 @@ export default function Home() {
                   alt="Adhwaith MV - Digital Marketing Specialist" 
                   width="768"
                   height="1024"
-                  loading="lazy"
+                  loading="eager"
+                  fetchPriority="high"
                   decoding="async"
                   className="w-full h-full object-cover object-[center_12%] brightness-100 contrast-[1.02] group-hover:scale-[1.02] transition-transform duration-500"
                 />
