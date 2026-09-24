@@ -257,19 +257,19 @@ export default function Home() {
                 {/* Right Card Details */}
                 <div className="space-y-4">
                   {/* Experience */}
-                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
-                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-1">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-black/80 mb-1">
                       Experience
                     </div>
-                    <div className="text-black font-extrabold text-base font-display flex items-center gap-2">
+                    <div className="text-black font-extrabold text-base sm:text-lg font-display flex items-center gap-2">
                       <Zap className="w-4 h-4 text-black shrink-0 stroke-[2.5]" />
                       <span>{personalInfo.rightCard.experience}</span>
                     </div>
                   </div>
 
                   {/* Specialism */}
-                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
-                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-1">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-black/80 mb-1">
                       Specialism
                     </div>
                     <div className="text-black font-extrabold text-sm sm:text-base font-display flex items-center gap-2">
@@ -279,34 +279,30 @@ export default function Home() {
                   </div>
 
                   {/* Core Skills */}
-                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
-                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-2">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-black/80 mb-1.5">
                       Core Skills
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {personalInfo.rightCard.coreSkills.split('•').map((skill, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-black/10 border border-black/20 text-black text-xs font-bold"
-                        >
-                          {skill.trim()}
+                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-black font-extrabold text-sm leading-snug">
+                      {personalInfo.rightCard.coreSkills.split('•').map((skill, idx, arr) => (
+                        <span key={idx} className="inline-flex items-center gap-2.5">
+                          <span>{skill.trim()}</span>
+                          {idx < arr.length - 1 && <span className="text-black/40 font-black">•</span>}
                         </span>
                       ))}
                     </div>
                   </div>
 
                   {/* Worked With */}
-                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
-                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-2">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-black/80 mb-1.5">
                       Worked With
                     </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {personalInfo.rightCard.workedWith.split('•').map((brand, idx) => (
-                        <span
-                          key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-black/10 border border-black/20 text-black text-xs font-bold"
-                        >
-                          {brand.trim()}
+                    <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-black font-extrabold text-sm leading-snug">
+                      {personalInfo.rightCard.workedWith.split('•').map((brand, idx, arr) => (
+                        <span key={idx} className="inline-flex items-center gap-2.5">
+                          <span>{brand.trim()}</span>
+                          {idx < arr.length - 1 && <span className="text-black/40 font-black">•</span>}
                         </span>
                       ))}
                     </div>
