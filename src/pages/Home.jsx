@@ -257,37 +257,37 @@ export default function Home() {
                 {/* Right Card Details */}
                 <div className="space-y-4">
                   {/* Experience */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-1">
                       Experience
                     </div>
-                    <div className="text-white font-bold text-base font-display flex items-center gap-2">
-                      <Zap className="w-4 h-4 text-sapling-400 shrink-0" />
+                    <div className="text-black font-extrabold text-base font-display flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-black shrink-0 stroke-[2.5]" />
                       <span>{personalInfo.rightCard.experience}</span>
                     </div>
                   </div>
 
                   {/* Specialism */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-1">
+                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-1">
                       Specialism
                     </div>
-                    <div className="text-sapling-300 font-bold text-sm sm:text-base font-display flex items-center gap-2">
-                      <Target className="w-4 h-4 text-sapling-400 shrink-0" />
+                    <div className="text-black font-extrabold text-sm sm:text-base font-display flex items-center gap-2">
+                      <Target className="w-4 h-4 text-black shrink-0 stroke-[2.5]" />
                       <span>{personalInfo.rightCard.specialism}</span>
                     </div>
                   </div>
 
                   {/* Core Skills */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-2">
                       Core Skills
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {personalInfo.rightCard.coreSkills.split('•').map((skill, idx) => (
                         <span
                           key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-sapling-400/10 border border-sapling-400/25 text-sapling-200 text-xs font-medium"
+                          className="px-2.5 py-1 rounded-lg bg-black/10 border border-black/20 text-black text-xs font-bold"
                         >
                           {skill.trim()}
                         </span>
@@ -296,15 +296,15 @@ export default function Home() {
                   </div>
 
                   {/* Worked With */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/10 hover:border-sapling-400/30 transition-colors">
-                    <div className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                  <div className="p-3.5 rounded-xl bg-[#8EE54F] border border-[#8EE54F] hover:bg-[#9cf257] transition-all shadow-sm">
+                    <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-black/75 mb-2">
                       Worked With
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {personalInfo.rightCard.workedWith.split('•').map((brand, idx) => (
                         <span
                           key={idx}
-                          className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-semibold"
+                          className="px-2.5 py-1 rounded-lg bg-black/10 border border-black/20 text-black text-xs font-bold"
                         >
                           {brand.trim()}
                         </span>
