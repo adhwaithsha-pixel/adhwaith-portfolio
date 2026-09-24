@@ -463,21 +463,21 @@ export default function Home() {
                 className="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 border border-white/10 flex flex-col justify-between relative group hover:border-sapling-400/40 transition-all duration-300 shadow-lg"
               >
                 <div>
-                  {/* Top Header: Emblem + Name + Role */}
-                  <div className="flex items-center gap-3.5 mb-4">
-                    <div className="w-12 h-12 rounded-xl overflow-hidden bg-dark-900 border border-sapling-400/30 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner p-1">
+                  {/* Top Header: Logo + Name + Role */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 group-hover:scale-105 transition-transform flex items-center justify-center">
                       {client.logo ? (
                         <img
                           src={client.logo}
                           alt={client.name}
-                          width="48"
-                          height="48"
+                          width="64"
+                          height="64"
                           loading="lazy"
                           decoding="async"
-                          className="w-full h-full object-cover rounded-lg"
+                          className="w-full h-full object-cover rounded-xl"
                         />
                       ) : (
-                        <span className="font-display font-bold text-sapling-400 text-sm">
+                        <span className="font-display font-bold text-sapling-400 text-base">
                           {client.symbol}
                         </span>
                       )}
