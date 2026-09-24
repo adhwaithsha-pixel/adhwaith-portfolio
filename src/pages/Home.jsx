@@ -332,15 +332,15 @@ export default function Home() {
       <section id="experience" className="relative py-24 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill border border-sapling-400/30 text-sapling-400 text-xs font-semibold uppercase tracking-wider">
-              <Briefcase className="w-3.5 h-3.5 text-sapling-400" />
-              <span>Career Journey</span>
+            <div className="inline-flex items-center gap-2 text-base font-bold text-[#8EE54F] uppercase tracking-wider">
+              <Briefcase className="w-4 h-4 text-[#8EE54F]" />
+              <span>My Career Journey</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display">
-              Professional <span className="text-gradient-primary">Experience Timeline</span>
+              Professional <span className="text-gradient-primary">Experience</span>
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              Track record of executing high-performing digital marketing campaigns, scaling budgets, and building conversion architecture.
+              Driving brand growth through strategic campaigns, performance marketing, SEO, social media, and automation.
             </p>
           </div>
 
