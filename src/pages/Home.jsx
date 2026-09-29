@@ -14,7 +14,8 @@ import {
   GraduationCap,
   Briefcase,
   Zap,
-  Layers
+  Layers,
+  Bot
 } from 'lucide-react';
 import { 
   personalInfo, 
@@ -40,6 +41,7 @@ export default function Home() {
   const getServiceIcon = (iconName) => {
     switch (iconName) {
       case 'Search': return <Search className="w-6 h-6 text-sapling-400" />;
+      case 'Bot': return <Bot className="w-6 h-6 text-sapling-400" />;
       case 'Share2': return <Share2 className="w-6 h-6 text-sapling-300" />;
       case 'TrendingUp': return <TrendingUp className="w-6 h-6 text-sapling-400" />;
       case 'PenTool': return <PenTool className="w-6 h-6 text-sapling-300" />;

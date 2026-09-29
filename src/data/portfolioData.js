@@ -16,6 +16,7 @@ import viyaInnovationsLogoImg from '../assets/viya-innovations-logo.jpg';
 import viyanisaLogoImg from '../assets/viyanisa-logo.jpg';
 import alverconnectLogoImg from '../assets/alverconnect-logo.png';
 import serviceSeoImg from '../assets/service-seo.jpg';
+import serviceChatGptAdsImg from '../assets/service-chatgpt-ads.jpg';
 import serviceSocialMediaImg from '../assets/service-social-media.jpg';
 import serviceMetaAdsImg from '../assets/service-meta-ads.jpg';
 import servicePerformanceMarketingImg from '../assets/service-performance-marketing.jpg';
@@ -616,6 +617,38 @@ export const servicesData = [
       "Competitor analysis",
       "Google Search Console & Analytics"
     ]
+  },
+  {
+    id: "chatgpt-ads-management",
+    name: "ChatGPT Ads Management",
+    badge: "AI Advertising",
+    icon: "Bot",
+    image: serviceChatGptAdsImg,
+    tagline: "High-intent AI conversational advertising & lead acquisition on ChatGPT.",
+    shortDesc: "I build, manage, and scale AI-powered conversational ad campaigns on ChatGPT and emerging AI platforms to target high-intent search queries and capture qualified leads.",
+    overview: "With the rise of generative search and conversational engines, ChatGPT is the new frontier for high-intent customer discovery. I help brands position themselves natively within AI search results and conversational prompts, driving qualified leads and maximizing conversion efficiency.",
+    deliverables: [
+      "ChatGPT ad strategy & setup",
+      "Conversational prompt targeting",
+      "AI ad copy & creative optimization",
+      "Intent-based audience segmentation",
+      "Lead generation & funnel integration",
+      "Performance tracking & ROAS monitoring",
+      "Continuous prompt & conversion testing"
+    ],
+    approach: [
+      { step: "01", title: "Intent Mapping", desc: "Identify top conversational prompts and high-value search queries in your niche." },
+      { step: "02", title: "Creative & Copy", desc: "Develop native conversational ad units and persuasive response copy." },
+      { step: "03", title: "Campaign Launch", desc: "Configure targeting parameters, bidding strategies, and conversion tracking." },
+      { step: "04", title: "Optimization", desc: "Continuously refine prompt triggers and scale winning ad variations." }
+    ],
+    benefits: [
+      "Target high-intent users at the exact moment of conversational discovery",
+      "Higher conversion rates compared to traditional passive display ads",
+      "First-mover advantage in AI-driven advertising channels",
+      "Actionable lead capture integrated directly into CRM & sales funnels"
+    ],
+    tools: ["ChatGPT", "OpenAI Ads", "Conversational AI", "Prompt Engineering", "Lead Funnels", "Google Analytics 4"]
   },
   {
     id: "social-media-marketing",

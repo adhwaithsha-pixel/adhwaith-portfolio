@@ -14,7 +14,8 @@ import {
   Layers,
   ArrowUpRight,
   ShieldCheck,
-  BarChart2
+  BarChart2,
+  Bot
 } from 'lucide-react';
 import { servicesData, projectsData } from '../data/portfolioData';
 
@@ -45,6 +46,7 @@ export default function ServiceDetail() {
   const getServiceIcon = (iconName) => {
     switch (iconName) {
       case 'Search': return <Search className="w-7 h-7 text-sapling-400" />;
+      case 'Bot': return <Bot className="w-7 h-7 text-sapling-400" />;
       case 'Share2': return <Share2 className="w-7 h-7 text-sapling-300" />;
       case 'TrendingUp': return <TrendingUp className="w-7 h-7 text-sapling-400" />;
       case 'PenTool': return <PenTool className="w-7 h-7 text-sapling-300" />;
